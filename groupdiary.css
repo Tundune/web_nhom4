@@ -31,6 +31,7 @@ th {
     background-color: #008dac;
     font-size: 2em;
     font-weight: bold;
+    text-align: center;
 }
 .week-info {
     text-align: center;
@@ -98,4 +99,8 @@ th {
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        }
+
+        .work {
+            width: 400px;
         }
