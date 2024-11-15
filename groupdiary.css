@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+}
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+}
+.table-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    border-collapse: collapse;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+.title-row th {
+    font-family: 'Dancing Script', cursive;
+    background-color: #008dac;
+    font-size: 2em;
+    font-weight: bold;
+}
+.week-info {
+    text-align: center;
+    margin-top: 20px;
+}
+.week-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.arrow {
+    cursor: pointer;
+    font-size: 30px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+}
+.week-label {
+    font-size: 24px;
+    font-weight: bold;
+}
+.empty-row td {
+    height: 50px;
+}
+ /* header */
+ .collapse.navbar-collapse {
+    justify-content: end;
+    }
+.navbar.navbar-expand-lg.navbar-light.bg-light {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    font-weight: bold;
+    }
+
+    .cover-body {
+        padding-top: 50px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .container-footer {
+        background: #cccccc73;
+        padding: 20px 0;
+    }
+    .newsletter {
+        display: flex;
+        }
+        .newsletter input[type="email"] {
+        width: 70%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        }
+        .newsletter button {
+        width: 20%;
+        padding: 10px;
+        background-color: #0056b3;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }

@@ -1,0 +1,92 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.implementations {
+    width: 100%;
+}
+.header-impl {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    /* background: #007bff; */
+    background-color: #008dac;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.body-impl {
+    display: flex;
+}
+.body-left {
+    width: 30%;
+    border-right: 1px solid #ccc;
+}
+.menu-name {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+}
+.menu-name li {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: calc(100% - 30px);
+}
+.menu-name li:first-child {
+    border-top: 1px solid #ccc;
+}
+.body-right {
+    width: calc(70% - 4px);
+}
+.list-project {
+    display: none;
+}
+.list-project li:first-child {
+    border-top: none;
+}
+.list-project li{
+    padding-left: 50px;
+    width: calc(100% - 65px);
+}
+.img-down {
+    width: 20px;
+}
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tab-content {
+    display: none;
+}
+.tab-content iframe {
+    min-height: 500px;
+    width: 100%;
+    border: none;
+    
+}
+.menu-name li.active {
+    background: #008daccc;
+    color: #fff;
+}
+.block {
+    display: block;
+}
+.flex {
+    display: flex;
+}
+.img-list {
+    width: 20px;
+}
+.tab {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

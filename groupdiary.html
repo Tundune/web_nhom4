@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Diary</title>
+    <link rel="stylesheet" href="groupdiary.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Elbasan&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="">
+      <!-- header -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="Home"><a class="nav-link" href="/index.html">Home</a></li>
+                <li class="Team"><a class="nav-link" href="/index.html">Team</a></li>
+                <li class="About"><a class="nav-link" href="/about.html">About</a></li>
+                <li class="Project"><a class="nav-link" href="/groupdiary.html">Group Diary</a></li>
+                <li class="Project"><a class="nav-link" href="/menuProject.html">Project</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login.html" target="_blank">Web Project</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</section>
+<section class="cover-body">
+    <h2 class="title">Group Diary</h2>
+    <table class="table-container" id="diary-table">
+        <thead>
+            <tr class="title-row">
+                <th>STT</th>
+                <th>Mã SV</th>
+                <th>Họ tên</th>
+                <th>Công việc được giao</th>
+                <th>Kết quả</th>
+                <th>Tiến độ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Content will be dynamically generated here -->
+        </tbody>
+    </table>
+
+    <div class="week-info">
+        <div class="week-navigation">
+            <span id="prev-week" class="arrow">&#8592;</span>
+            <span class="week-label" id="current-week">Week 1</span>
+            <span id="next-week" class="arrow">&#8594;</span>
+        </div>
+    </div>
+</section>
+  <!-- footer -->
+  <div class="container-footer">
+    <div class="container">
+      <div class="section">
+        <h2>GROUP 4</h2>
+        <p>Hồ Chí Minh Nông Lâm University<br>
+        Thủ Đức City, Hồ Chí Minh City,<br>
+        Việt Nam</p>
+        <p>Phone: +84 342 104 524<br>
+        Email: gtnm24group4@gmail.com</p>
+      </div>
+      <div class="section">
+        <h2>Our Members</h2>
+        <ul class="our-members">
+          <li>Đặng Tuấn Vũ</li>
+          <li>Trần Công Vinh</li>
+          <li>Võ Trần Ngọc Trường</li>
+          <li>Nguyễn Thúy Vy</li>
+          <li>Trang Gia Bảo</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>Newsletter</h2>
+        <div class="newsletter">
+          <input type="email" placeholder="Email is here" />
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+        const weeklyData = [
+            {
+                week: 1,
+                tasks: [
+                    { stt: 1, msv: "23130386", name: "Đặng Tuấn Vũ", task: "Yêu cầu chức năng: Implementation", result: "Hoàn thành", progress: "100%" },
+                    { stt: 2, msv: "23130384", name: "Trần Công Vinh", task: "Yêu cầu chức năng: Login", result: "Hoàn thành", progress: "100%" },
+                    { stt: 3, msv: "23130359", name: "Võ Trần Ngọc Trường", task: "Yêu cầu chức năng: Group Diary", result: "Hoàn thành", progress: "100%" },
+                    { stt: 4, msv: "23130397", name: "Trần Thúy Vy", task: "Yêu cầu chức năng: Design", result: "Hoàn thành", progress: "100%" },
+                    { stt: 5, msv: "23130025", name: "Trang Gia Bảo", task: "Yêu cầu chức năng: Menu project & Requirement", result: "Hoàn thành", progress: "100%" },
+                ]
+            },
+            {
+                week: 2,
+                tasks: [
+                    { stt: 1, msv: "23130386", name: "Đặng Tuấn Vũ", task: "Yêu cầu chức năng: Project", result: "Hoàn thành", progress: "100%" },
+                    { stt: 2, msv: "23130384", name: "Trần Công Vinh", task: "Yêu cầu chức năng: Login", result: "Hoàn thành", progress: "100%" },
+                    { stt: 3, msv: "23130359", name: "Võ Trần Ngọc Trường", task: "Yêu cầu chức năng: Group Diary", result: "Hoàn thành", progress: "100%" },
+                    { stt: 4, msv: "23130397", name: "Trần Thúy Vy", task: "Yêu cầu chức năng: Project", result: "Hoàn thành", progress: "100%" },
+                    { stt: 5, msv: "23130025", name: "Trang Gia Bảo", task: "Yêu cầu chức năng: Menu", result: "Hoàn thành", progress: "100%" },
+                ]
+            },
+            {
+                week: 3,
+                tasks: [
+                    { stt: 1, msv: "23130386", name: "Đặng Tuấn Vũ", task: "Yêu cầu chức năng: Report", result: "Hoàn thành", progress: "100%" },
+                    { stt: 2, msv: "23130384", name: "Trần Công Vinh", task: "Yêu cầu chức năng: Profile", result: "Hoàn thành", progress: "100%" },
+                    { stt: 3, msv: "23130359", name: "Võ Trần Ngọc Trường", task: "Yêu cầu chức năng: Notification", result: "Hoàn thành", progress: "100%" },
+                    { stt: 4, msv: "23130397", name: "Trần Thúy Vy", task: "Yêu cầu chức năng: Admin Panel", result: "Hoàn thành", progress: "100%" },
+                    { stt: 5, msv: "23130025", name: "Trang Gia Bảo", task: "Yêu cầu chức năng: Payment", result: "Hoàn thành", progress: "100%" },
+                ]
+            },
+            {
+                week: 4,
+                tasks: [
+                    { stt: 1, msv: "23130386", name: "Đặng Tuấn Vũ", task: "Yêu cầu chức năng: Report", result: "Hoàn thành", progress: "100%" },
+                    { stt: 2, msv: "23130384", name: "Trần Công Vinh", task: "Yêu cầu chức năng: Profile", result: "Hoàn thành", progress: "100%" },
+                    { stt: 3, msv: "23130359", name: "Võ Trần Ngọc Trường", task: "Yêu cầu chức năng: Notification", result: "Hoàn thành", progress: "100%" },
+                    { stt: 4, msv: "23130397", name: "Trần Thúy Vy", task: "Yêu cầu chức năng: Admin Panel", result: "Hoàn thành", progress: "100%" },
+                    { stt: 5, msv: "23130025", name: "Trang Gia Bảo", task: "Yêu cầu chức năng: Payment", result: "Hoàn thành", progress: "100%" },
+                ]
+            }
+        ];
+
+        let currentWeek = 0;
+        
+        function updateWeekDisplay(weekIndex) {
+            var currentWeekLabel = document.getElementById("current-week");
+            currentWeekLabel.innerText = "Week " + (weekIndex + 1);
+
+            const weekData = weeklyData[weekIndex];
+            const table = document.getElementById("diary-table");
+            const tbody = table.querySelector("tbody");
+
+            tbody.innerHTML = '';
+
+            weekData.tasks.forEach(task => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${task.stt}</td>
+                    <td>${task.msv}</td>
+                    <td>${task.name}</td>
+                    <td>${task.task}</td>
+                    <td>${task.result}</td>
+                    <td>${task.progress}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            const numRowsToAdd = 5 - weekData.tasks.length;
+            for (let i = 0; i < numRowsToAdd; i++) {
+                const emptyRow = document.createElement("tr");
+                emptyRow.classList.add("empty-row");
+                emptyRow.innerHTML = `<td colspan="6"></td>`;
+                tbody.appendChild(emptyRow);
+            }
+
+            if (weekIndex === 0) {
+                document.getElementById("prev-week").style.display = "none";
+            } else {
+                document.getElementById("prev-week").style.display = "inline";
+            }
+        }
+
+        updateWeekDisplay(currentWeek);
+
+        document.getElementById("prev-week").addEventListener("click", function() {
+            if (currentWeek > 0) {
+                currentWeek--;
+                updateWeekDisplay(currentWeek);
+            }
+        });
+
+        document.getElementById("next-week").addEventListener("click", function() {
+            if (currentWeek < weeklyData.length - 1) {
+                currentWeek++;
+                updateWeekDisplay(currentWeek);
+            }
+        });
+    </script>
+
+</body>
+</html>

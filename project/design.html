@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Nổi</title>
+    <style>
+        /* Tổng quát */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        /* Nút */
+        .button-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #008dac; 
+            color: white;
+            cursor: pointer;
+        }
+
+        .tab-button:hover {
+            background-color: #01738d; /* Màu tối hơn khi di chuột qua */
+        }
+
+        /* Modal */
+        .modal {
+            display: none; /* Ẩn modal mặc định */
+            position: fixed; /* Vị trí cố định */
+            z-index: 1000; /* Để nó nằm trên các phần tử khác */
+            left: 0;
+            top: 0;
+            width: 100%; /* Toàn bộ chiều rộng */
+            height: 100%; /* Toàn bộ chiều cao */
+            background-color: rgba(0, 0, 0, 0.7); /* Nền mờ */
+            justify-content: center; /* Canh giữa theo chiều ngang */
+            align-items: center; /* Canh giữa theo chiều dọc */
+        }
+
+        /* Nội dung modal */
+        .modal-content {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            width: 80%; /* Chiều rộng modal */
+            max-width: 600px; /* Chiều rộng tối đa */
+            max-height: 80%; /* Chiều cao tối đa */
+            overflow-y: auto; /* Cho phép cuộn dọc */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tiêu đề */
+        h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Hình ảnh */
+        img {
+            max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của phần tử */
+            height: auto;    /* Duy trì tỷ lệ khung hình */
+            border: 1px solid #ddd; /* Biên cho hình ảnh */
+            margin: 10px 0; /* Khoảng cách trên và dưới hình ảnh */
+        }
+
+        /* Danh sách */
+        ul {
+            padding-left: 20px; /* Khoảng cách bên trái cho danh sách */
+        }
+
+        ul li {
+            margin: 5px 0; /* Khoảng cách giữa các mục trong danh sách */
+        }
+
+        /* Đóng modal */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="button-container">
+    <button class="tab-button" onclick="showModal('login')">Login</button>
+    <button class="tab-button" onclick="showModal('groupDiary')">Group Diary</button>
+    <button class="tab-button" onclick="showModal('requirement')">Requirement</button>
+    <button class="tab-button" onclick="showModal('implementation')">Implementation</button>
+</div>
+<!-- Modal cho Login -->
+<div id="login" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('login')">&times;</span>
+        <h4>Wireframes</h4>
+        <p>Wireframes là bản phác thảo cơ bản của giao diện, thể hiện cấu trúc và bố cục mà không cần chi tiết về màu sắc và kiểu chữ.</p>
+        <img src="https://www.svgrepo.com/show/376344/python.svg" alt="Wireframe Example">
+        
+        <h4>Mockups</h4>
+        <p>Mockups là phiên bản chi tiết hơn của wireframes, thể hiện cách mà giao diện sẽ trông như thế nào với màu sắc, font chữ và các yếu tố thiết kế khác.</p>
+        <img src="mockup-example.png" alt="Mockup Example">
+        
+        <h4>Hướng Dẫn Thiết Kế</h4>
+        <p><strong>Màu sắc:</strong> #3498db (Xanh dương), #2ecc71 (Xanh lá), #e74c3c (Đỏ)</p>
+        <p><strong>Font chữ:</strong> Arial, sans-serif</p>
+        
+        <h4>Thiết Kế Thành Phần</h4>
+        <ul>
+            <li><strong>Nút:</strong> Kích thước 40px x 20px, màu xanh lá cây.</li>
+            <li><strong>Form:</strong> Các trường nhập liệu với chiều rộng 100%.</li>
+            <li><strong>Thanh điều hướng:</strong> Đặt ở đầu trang với các liên kết đến các phần khác.</li>
+        </ul>
+    </div>
+    </div>
+</div>
+
+<!-- Modal cho Group Diary -->
+<div id="groupDiary" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('groupDiary')">&times;</span>
+        <h4>Wireframes</h4>
+        <p>Wireframes là bản phác thảo cơ bản của giao diện, thể hiện cấu trúc và bố cục mà không cần chi tiết về màu sắc và kiểu chữ.</p>
+        <img src="https://www.svgrepo.com/show/376344/python.svg" alt="Wireframe Example">
+        
+        <h4>Mockups</h4>
+        <p>Mockups là phiên bản chi tiết hơn của wireframes, thể hiện cách mà giao diện sẽ trông như thế nào với màu sắc, font chữ và các yếu tố thiết kế khác.</p>
+        <img src="mockup-example.png" alt="Mockup Example">
+        
+        <h4>Hướng Dẫn Thiết Kế</h4>
+        <p><strong>Màu sắc:</strong> #3498db (Xanh dương), #2ecc71 (Xanh lá), #e74c3c (Đỏ)</p>
+        <p><strong>Font chữ:</strong> Arial, sans-serif</p>
+        
+        <h4>Thiết Kế Thành Phần</h4>
+        <ul>
+            <li><strong>Nút:</strong> Kích thước 40px x 20px, màu xanh lá cây.</li>
+            <li><strong>Form:</strong> Các trường nhập liệu với chiều rộng 100%.</li>
+            <li><strong>Thanh điều hướng:</strong> Đặt ở đầu trang với các liên kết đến các phần khác.</li>
+        </ul>
+    </div>
+    </div>
+</div>
+
+<!-- Modal cho Requirement -->
+<div id="requirement" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('requirement')">&times;</span>
+        
+        <h4>Wireframes</h4>
+        <p>Wireframes là bản phác thảo cơ bản của giao diện, thể hiện cấu trúc và bố cục mà không cần chi tiết về màu sắc và kiểu chữ.</p>
+        <img src="https://www.svgrepo.com/show/376344/python.svg" alt="Wireframe Example">
+        
+        <h4>Mockups</h4>
+        <p>Mockups là phiên bản chi tiết hơn của wireframes, thể hiện cách mà giao diện sẽ trông như thế nào với màu sắc, font chữ và các yếu tố thiết kế khác.</p>
+        <img src="mockup-example.png" alt="Mockup Example">
+        
+        <h4>Hướng Dẫn Thiết Kế</h4>
+        <p><strong>Màu sắc:</strong> #3498db (Xanh dương), #2ecc71 (Xanh lá), #e74c3c (Đỏ)</p>
+        <p><strong>Font chữ:</strong> Arial, sans-serif</p>
+        
+        <h4>Thiết Kế Thành Phần</h4>
+        <ul>
+            <li><strong>Nút:</strong> Kích thước 40px x 20px, màu xanh lá cây.</li>
+            <li><strong>Form:</strong> Các trường nhập liệu với chiều rộng 100%.</li>
+            <li><strong>Thanh điều hướng:</strong> Đặt ở đầu trang với các liên kết đến các phần khác.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal cho Implementation -->
+<div id="implementation" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('implementation')">&times;</span>
+        <h4>Wireframes</h4>
+        <p>Wireframes là bản phác thảo cơ bản của giao diện, thể hiện cấu trúc và bố cục mà không cần chi tiết về màu sắc và kiểu chữ.</p>
+        <img src="https://www.svgrepo.com/show/376344/python.svg" alt="Wireframe Example">
+        
+        <h4>Mockups</h4>
+        <p>Mockups là phiên bản chi tiết hơn của wireframes, thể hiện cách mà giao diện sẽ trông như thế nào với màu sắc, font chữ và các yếu tố thiết kế khác.</p>
+        <img src="mockup-example.png" alt="Mockup Example">
+        
+        <h4>Hướng Dẫn Thiết Kế</h4>
+        <p><strong>Màu sắc:</strong> #3498db (Xanh dương), #2ecc71 (Xanh lá), #e74c3c (Đỏ)</p>
+        <p><strong>Font chữ:</strong> Arial, sans-serif</p>
+        
+        <h4>Thiết Kế Thành Phần</h4>
+        <ul>
+            <li><strong>Nút:</strong> Kích thước 40px x 20px, màu xanh lá cây.</li>
+            <li><strong>Form:</strong> Các trường nhập liệu với chiều rộng 100%.</li>
+            <li><strong>Thanh điều hướng:</strong> Đặt ở đầu trang với các liên kết đến các phần khác.</li>
+        </ul>
+    </div>
+    </div>
+</div>
+
+<script>
+    function showModal(tabName) {
+        // Hiển thị modal tương ứng
+        document.getElementById(tabName).style.display = "flex";
+    }
+
+    function closeModal(tabName) {
+        // Ẩn modal
+        document.getElementById(tabName).style.display = "none";
+    }
+
+    // Đóng modal khi nhấp ra ngoài vùng nội dung modal
+    window.onclick = function(event) {
+        var modals = document.querySelectorAll('.modal');
+        modals.forEach(function(modal) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

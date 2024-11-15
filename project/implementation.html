@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <section class="implementations">
+      <div class="header-impl">
+          IMPLEMENTATION
+      </div>
+      <div class="body-impl">
+        <div class="body-left">
+            <ul class="menu-name">
+                <li class="tab menu-li active login" onclick="openTab('login')">Login</li>
+                <li class="tab menu-li groupDiary" onclick="openTab('groupDiary')">Design</li>
+                <li class="list menu-li" onclick="showTab()">Project <img class="img-down" src="/img/down-2-svgrepo-com.svg" alt=""></li>
+                <div class="list-project">
+                  <li class="tab menu-li requirement" onclick="openTab('requirement')"><img class="img-list" src="/img/align-left-svgrepo-com.svg" alt="">Requirement</li>
+                  <li class="tab menu-li design" onclick="openTab('design')"><img class="img-list" src="/img/align-left-svgrepo-com.svg" alt="">Design</li>
+                  <li class="tab menu-li implementation" onclick="openTab('implementation')"><img class="img-list" src="/img/align-left-svgrepo-com.svg" alt="">Implementation</li>
+                </div>
+            </ul>
+        </div>
+        <div class="body-right">
+        <div class="tab-content" id="login" style="display: block;">
+          <iframe src="/requirement.html"></iframe>
+      </div>
+      <div class="tab-content" id="groupDiary">
+          <iframe src="design.html"></iframe>
+      </div>
+        <div class="tab-content " id="requirement">
+            <iframe src="/requirement.html"></iframe>
+        </div>
+        <div class="tab-content" id="design">
+            <iframe src="design.html"></iframe>
+        </div>
+        <div class="tab-content" id="implementation">
+            <iframe src="/project/implementation.html"></iframe>
+        </div>
+        </div>
+      </div>
+  </section>
+</body>
+</html>
+<script>
+  function openTab(cityName) {
+    
+    var i;
+    var x = document.getElementsByClassName("tab-content");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    var y = document.getElementsByClassName("menu-li");
+    for (i = 0; i < y.length; i++) {
+        y[i].classList.remove("active");
+    }
+    
+  document.getElementById(cityName).style.display = "block";
+  document.getElementsByClassName(cityName)[0].classList.add("active");
+}
+function showTab() {
+        if(document.querySelector('.list').classList.contains('flex')) {
+          document.querySelector('.list').classList.remove('flex')
+          document.querySelector('.list-project').classList.remove('block')
+        } else {
+          document.querySelector('.list').classList.add('flex')
+          document.querySelector('.list-project').classList.add('block')
+        }
+        
+}
+</script>

@@ -134,7 +134,7 @@ body {
     margin: auto;
 }
 .about {
-    padding: 20px 0;
+    padding: 60px 0;
 }
 .list-card {
   display: grid;
@@ -254,7 +254,7 @@ body {
 }
 .address, .contact {
   background-color: #f1f1f1;
-  padding: 20px;
+  padding: 60px 20px;
   border-radius: 5px;
 }
 .map {
@@ -366,4 +366,9 @@ button:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.container-footer {
+    background: #cccccc73;
+    padding: 20px 0;
 }

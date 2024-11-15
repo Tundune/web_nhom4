@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập và đăng ký</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+      background-image: url('./img/pexels-photo-1519088.jpeg');
+      /* backdrop-filter: blur(5px); */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .container button {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .container button:hover {
+      background-color: #45a049;
+    }
+    .container p {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .container a {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Đăng nhập</h2>
+    <input type="text" placeholder="Tài khoản" id="login-username">
+    <input type="password" placeholder="Mật khẩu" id="login-password">
+    <input type="checkbox" id="remember-me">
+    <label for="remember-me">Lưu mật khẩu</label>
+    <button onclick="login()">ĐĂNG NHẬP</button>
+    <p>hoặc</p>
+    <a href="#" onclick="showRegister()">ĐĂNG KÝ</a>
+  </div>
+
+  <div class="container hidden" id="register-container">
+    <h2>Đăng ký</h2>
+    <input type="text" placeholder="Tài khoản" id="register-username">
+    <input type="password" placeholder="Mật khẩu" id="register-password">
+    <input type="password" placeholder="Nhập lại mật khẩu" id="register-confirm-password">
+    <button onclick="register()">ĐĂNG KÝ</button>
+    <a href="#" onclick="showLogin()">ĐĂNG NHẬP</a>
+  </div>
+
+  <script>
+    function login() {
+      // Xử lý đăng nhập, chẳng hạn như chuyển hướng đến trang group4.html
+      window.location.href = 'group4.html';
+    }
+
+    function register() {
+      // Xử lý đăng ký, lưu thông tin vào thư mục "taikhoanmatkhau"
+      // ...
+    }
+
+    function showRegister() {
+      document.getElementById('register-container').classList.remove('hidden');
+      document.querySelector('.container:not(#register-container)').classList.add('hidden');
+    }
+
+    function showLogin() {
+      document.getElementById('register-container').classList.add('hidden');
+      document.querySelector('.container:not(#register-container)').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
