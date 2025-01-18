@@ -287,3 +287,15 @@ html {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
+
+  .btn-contact {
+    border: 1px solid #ccc;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    max-width: 100px;
+    margin: auto;
+    margin-bottom: 20px;
+    color: #333;
+  }
