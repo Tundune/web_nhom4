@@ -282,3 +282,8 @@ html {
   .body-result {
     padding-top: 20px;
   }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }

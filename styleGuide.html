@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+Elbasan&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- header -->
+     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="Home"><a class="nav-link" href="./index.html">Home</a></li>
+              <li class="Team"><a class="nav-link" href="./index.html#team">Team</a></li>
+              <li class="About"><a class="nav-link" href="./about.html">About</a></li>
+              <li class="Project"><a class="nav-link" href="./groupdiary.html">Group Diary</a></li>
+              <li class="Project"><a class="nav-link" href="./menuProject.html">Project</a></li>
+              <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="./result.html">Result</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Style Guile</a></li>
+              <li class="nav-item"><a class="nav-link" href="./login.html" target="_blank">Login</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://tundune.github.io/project/" target="_blank">Web project</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- body-style -->
+      <section class="body-style">
+        <div class="style-top">
+           Style Guide
+        </div>
+        <ul class="menu-header">
+            <li class="tablinks typography active" onclick="openCity('typography')">Typography</li>
+            <li class="tablinks directory" onclick="openCity('directory')">Directory</li>
+            <li class="tablinks images" onclick="openCity('images')">Images</li>
+            <li class="tablinks colorPalette" onclick="openCity('colorPalette')">Color Palette</li>
+        </ul> 
+        <!-- typography -->
+        <div class="js-body" id="typography">
+          <h1 class="text-title">Typography</h1>
+          <div class="title">
+            <h4>Font family</h4> 
+          </div>
+          <div class="in-text">
+            <p>Sử dụng font-family: "Noto Sans",  sans-serif cho website.</p>
+          </div>
+          <div class="title">
+            <h4>Font size</h4> 
+          </div>
+          <div class="in-text">
+            <p>Sử dụng font-size: 18px cho các đề mục lớn.</p>
+            <p>Sử dụng font-size: 16px hoặc 14px cho các phần giải thích.</p>
+          </div>
+          <div class="title">
+            <h4>Font weight</h4> 
+          </div>
+          <div class="in-text">
+            <p>Sử dụng font-weight: bold cho toàn bộ website.</p>
+          </div>
+          <div class="title">
+            <h4>Text color</h4> 
+          </div>
+          <div class="in-text">
+            <p>Các màu dc dùng trong bài là:</p>
+            <p>color: #333;</p>
+            <p>color: #000;</p>
+            <p>color: #fff;</p>
+            <p>color: rgba(0, 0, 0, .5);</p>
+          </div>
+        </div>
+        <!--directory  -->
+        <div class="js-body" id="directory" style="display: none;">
+          <h1 class="text-title">Directory</h1>
+          <p class="in-text">Đây là cây thư mục của web nhóm:</p>
+          <img src="../img/Screenshot 2025-01-18 083858.png" alt="">
+        </div>
+
+        <!-- images -->
+        <div class="js-body" id="images" style="display: none;">
+          <h1 class="text-title">Images</h1>
+          <div class="in-text">
+            <p>Kích thước avatar là: 100x100</p>
+            <p>Kích thước của các icon được dùng là: 50x50</p>
+          </div>
+        </div>
+
+         <!-- color palette -->
+         <div class="js-body" id="colorPalette" style="display: none;">
+          <h1 class="text-title">Color Palette</h1>
+          <div class="in-text-color">
+            <p>Website chủ yếu là được kết hợp bởi các màu chủ yếu là: </p>
+            <div class="color">
+              <div class="color-1">#007bff</div>
+              <div class="color-2">#ffffff</div>
+              <div class="color-3">#008dac</div>
+              <div class="color-4">#0056b3</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+         <!-- footer -->
+<div class="container-footer">
+  <div class="container">
+    <div class="section">
+      <h2>GROUP 4</h2>
+      <p>Hồ Chí Minh Nông Lâm University<br>
+      Thủ Đức City, Hồ Chí Minh City,<br>
+      Việt Nam</p>
+      <p>Phone: +84 342 104 524<br>
+      Email: gtnm24group4@gmail.com</p>
+    </div>
+    <div class="section">
+      <h2>Our Members</h2>
+      <ul class="our-members">
+        <li>Đặng Tuấn Vũ</li>
+        <li>Trần Công Vinh</li>
+        <li>Võ Trần Ngọc Trường</li>
+        <li>Nguyễn Thúy Vy</li>
+        <li>Trang Gia Bảo</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Newsletter</h2>
+      <div class="newsletter">
+        <input type="email" placeholder="Email is here" />
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<script>
+    function openCity(cityName) {
+var i;
+    var x = document.getElementsByClassName("js-body");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    var y = document.getElementsByClassName("tablinks");
+    for (i = 0; i < y.length; i++) {
+        y[i].classList.remove("active");
+    }
+    
+    document.getElementById(cityName).style.display = "block";
+    document.getElementsByClassName(cityName)[0].classList.add("active");
+}
+</script>
